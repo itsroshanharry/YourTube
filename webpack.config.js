@@ -34,6 +34,9 @@ module.exports = {
       patterns: [
         { from: "manifest.json", to: "manifest.json" },
         { from: "src/popup.html", to: "popup.html" },
+        { from: "icons/icon16.png", to: "icons/icon16.png"},
+        { from: "icons/icon48.png", to: "icons/icon48.png"},
+        { from: "icons/icon128.png", to: "icons/icon128.png"}
       ],
     }),
     new MiniCssExtractPlugin({
