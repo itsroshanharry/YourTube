@@ -1,1 +1,1 @@
-(()=>{"use strict";chrome.tabs.onUpdated.addListener(((e,s,o)=>{var t;"complete"===s.status&&(null===(t=o.url)||void 0===t?void 0:t.includes("youtube.com"))&&chrome.tabs.sendMessage(e,{action:"checkForVideos"})}))})();
+(()=>{"use strict";chrome.tabs.onUpdated.addListener(((e,s,o)=>{var t;"complete"===s.status&&(null===(t=o.url)||void 0===t?void 0:t.includes("youtube.com"))&&chrome.storage.sync.get(["isEnabled"],(s=>{s.isEnabled&&chrome.tabs.sendMessage(e,{action:"checkForVideos"})}))}))})();
