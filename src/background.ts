@@ -1,9 +1,12 @@
-chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
-  if (changeInfo.status === 'complete' && tab.url?.includes('youtube.com')) {
-    chrome.storage.sync.get(['isEnabled'], (result) => {
-      if (result.isEnabled) {
-        chrome.tabs.sendMessage(tabId, { action: 'checkForVideos' });
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  if (request.action === 'toggleExtension' || request.action === 'updateKeywords') {
+    chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
+      if (tabs[0]?.id) {
+        chrome.tabs.sendMessage(tabs[0].id, request).catch(error => {
+          console.error("Error sending message from background:", error);
+        });
       }
     });
   }
+  return true; 
 });
