@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "YouTube Keyword Blocker",
+  "name": "YouTube Keyword Hider",
   "version": "1.0",
-  "description": "Blocks YouTube videos based on keywords",
+  "description": "Hides YouTube videos based on user-defined keywords",
   "permissions": ["storage", "activeTab"],
   "host_permissions": ["*://*.youtube.com/*"],
   "background": {
