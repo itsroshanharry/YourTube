@@ -10,7 +10,7 @@ YourTube is a chrome extension that allows you to hide unwanted youtube videos t
 
 <div align="center">
   <h2>Demo Video</h2>
-  <img src="thumbnail/YourTubethumbnail.png" alt="Watch the video" width="600" height="auto"/>
+  <img src="thumbnail/YourTube thumbnail.png" alt="Watch the video" width="600" height="auto"/>
 </div>
 
 Demo video link - https://www.youtube.com/watch?v=pFaSJtRq98A&t=3s
